@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    
+
+     <!-- icons link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+       html,body{
+        width: 100%;
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          overflow-x: hidden;
+          background-color: black;
+       }
+       /* nav bar */
+      nav img{
+          margin-left: 20px;
+        }
+      nav{
+            background-color: black;
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    ul{
+        display: flex;
+        color: red;
+    }
+    li{
+        list-style: none;
+    }
+    li a{
+        text-decoration: none;
+          color: white;
+          margin-right: 50px;
+          transition-duration: 0.3s;
+          transition-timing-function: linear;
+          transition-delay: 0s;
+    }
+    li a:hover{
+          color: #00ffa2;
+          border-bottom: 2px #00ffa2 solid;
+          padding: 5px;
+        }
+    .toggle{
+          position: absolute;
+          top: 40px;
+          right: 16px;
+          display: none;
+          font-size: 20px;
+        }
+    .active{
+            display: block;
+          }
+
+          /* Home */
+          section{
+            background-image: url(./images/h3pGxo.gif);
+            background-size: cover;
+             background-repeat:no-repeat;
+             background-position: center;  
+          }
+          section div{
+             display: flex;
+             flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 450px;
+            line-height: 0px;      
+          }
+          section div h1{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding-left: 40px;
+            font-size: 50px;
+            color: white;
+          }
+          section div button{
+            width: 150px;
+            height: 30px;
+            border-radius: 20px;
+           margin-left: 40px;
+           margin-top: 20px;
+           background-color:#00ffa2;
+           border: none;
+           transition-duration: 0.5s;
+            transition-timing-function: linear;
+            transition-delay: 0s;       
+          }
+          section div button:hover{
+            width: 160px;
+            height: 35px;
+            box-shadow: 1px 0px 12px 4px #00ffa2;
+            -webkit-box-shadow: 1px 0px 12px 4px #00ffa2;
+            -moz-box-shadow: 1px 0px 12px 4px #00ffa2;
+          }
+          section img{
+            height:450px;
+            width: 500px;
+            position: absolute;
+            top: 80px;
+            right: 0px;
+          }
+          /* About */
+          #About{
+            margin-top: 30px;
+            width: 100%;
+            height: 500px;
+            display: flex;
+          }
+          .img-about{
+            width: 40%;
+          }
+          #img-about{
+            height:250px;
+            width: 200px;
+            position: absolute;
+            top: 650px;
+            left: 90px;
+            transition-duration: 0.5s;
+            transition-timing-function: linear;
+          }
+          #img-about:hover{
+            height:300px;
+            width: 250px;
+          }
+          .about-me{
+            width: 60%;
+            color: white;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+            padding: 50px;
+          }
+          #About button{
+            background-color: #00ffa2;
+            border: none;
+            width: 100px;
+            height: 30px;
+            border-radius: 10px;
+            transition-timing-function: linear;
+            transition-duration: 0.5s;
+          }
+          #About button:hover{
+            width: 120px;
+            height: 35px;
+            box-shadow: 1px 0px 12px 4px #00ffa2;
+            -webkit-box-shadow: 1px 0px 12px 4px #00ffa2;
+            -moz-box-shadow: 1px 0px 12px 4px #00ffa2;
+          }
+          /* skills */
+          .skills{
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            /* border: 1px red solid; */
+           }
+          .progress-bar{
+            width: 160px;
+            height: 160px;
+          }
+          .outer{
+              width: 160px;
+              height: 160px;
+              border: 1px #00ffa2 solid;
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;      
+          }
+          .inner{
+            width: 120px;
+              height: 120px;
+              border-radius: 50%;
+              border: 1px #00ffa2 solid;
+              position: relative;
+              top: -222px;
+              left: 20px;
+          }
+          circle{
+              fill: none;
+              stroke:#00ffa2;
+              stroke-width: 20px;
+              stroke-dasharray: 472;
+              stroke-dashoffset: 472;
+              animation: animie 2s linear forwards;
+          }
+          #span{
+            position: relative;
+            top: -85%;
+            left: -18%;
+            transform: translate(50%,50%);
+          }
+          @keyframes animie{
+              100%{
+                  stroke-dashoffset: 75;
+              }
+          }
+          /* CSS */
+          .progress-bar1{
+            width: 160px;
+            height: 160px;
+          }
+          #circle{
+              animation: animi 2s linear forwards;
+          }
+            #span-css{
+              position: relative;
+              top: -90%;
+              left: -15%;
+              transform: translate(50%,50%);
+            }
+          @keyframes animi{
+              100%{
+                  stroke-dashoffset: 95;
+              }
+          }
+           /* JS */
+           .progress-bar2{
+            width: 160px;
+            height: 160px;
+            /* border: 1px red solid; */
+          }
+          #circle1{
+              animation: anim 2s linear forwards;
+          }
+          #span-JS{
+            position: relative;
+              top: -90%;
+              left: -25%;
+              transform: translate(50%,50%);
+          }
+          @keyframes anim{
+              100%{
+                  stroke-dashoffset: 212;
+              }
+          }
+         /* reactJS */
+         .progress-bar3{
+            width: 160px;
+            height: 160px;
+            /* border: 1px red solid; */
+          }
+          #circle2{
+              animation: ani 2s linear forwards;
+          }
+          #span-reactJS{
+            position: relative;
+              top: -90%;
+              left: -20%;
+              transform: translate(50%,50%);
+          }
+          @keyframes ani{
+              100%{
+                  stroke-dashoffset: 212;
+              }
+          }
+          /* technical skills */
+          #Technical-skills{
+            width: 100%;
+            height: 250px;
+            /* border: 1px red solid; */
+            color: #00ffa2;
+            font-size: 20px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column; 
+          }
+          b{
+            position: relative;
+            top: -20px;
+          }
+          #percentage{
+            position: relative;
+            left:  90%;
+            top: -40px;
+            
+          }
+          .progressbar{
+            width: 80%;
+            height: 20px;
+            border: 1px #00ffa2 solid;
+            border-radius: 10px;
+          }
+          .progressline{
+            width: 90%;
+            height: 20px;
+            background-color: #00ffa2;
+            border-radius: 10px;
+            animation: progressline 3s linear forwards;
+          }
+          @keyframes progressline{
+               0%{width: 0%;}
+               100%{width: 90%;}
+           }
+           .progressline1{
+            width: 85%;
+            animation: progressline1 3s linear forwards;
+           }
+           @keyframes progressline1{
+               0%{width: 0%;}
+               100%{width: 85%;}
+           }
+           .progressline2{
+            width: 95%;
+            animation: progressline2 3s linear forwards;
+           }
+           @keyframes progressline2{
+               0%{width: 0%;}
+               100%{width: 95%;}
+           }
+           .progressline3{
+            width: 80%;
+            animation: progressline3 3s linear forwards;
+           }
+           @keyframes progressline3{
+               0%{width: 0%;}
+               100%{width: 80%;}
+           }
+
+           /* projects */
+           #projects{
+             width: 100%;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+          }
+           .project-event{
+            width: 250px;
+            height: 300px;
+            
+           }
+           .content{
+            width: 250px;
+            height: 300px;
+            position: relative;
+            top: -101%;
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition-duration: 0.7s;
+            transition-timing-function: linear;
+           }
+           a{
+            text-decoration: none;
+           }
+           .content:hover{
+            color: #00ffa2;
+            opacity: 1;
+            background: rgba(0, 0, 0, 0.6);
+            box-shadow: 1px 0px 12px 4px #00ffa2;
+            -webkit-box-shadow: 1px 0px 12px 4px #00ffa2;
+            -moz-box-shadow: 1px 0px 12px 4px #00ffa2;
+           }
+           #SampleProjects{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+           }
+           #SampleProjects button{
+            background-color: #00ffa2;
+            border: none;
+            width: 150px;
+            height: 30px;
+            border-radius: 10px;
+            transition-timing-function: linear;
+            transition-duration: 0.5s;
+          }
+          #SampleProjects button:hover{
+            width: 180px;
+            height: 35px;
+            box-shadow: 1px 0px 12px 4px #00ffa2;
+            -webkit-box-shadow: 1px 0px 12px 4px #00ffa2;
+            -moz-box-shadow: 1px 0px 12px 4px #00ffa2;
+          }
+
+
+          /* logout */
+          .logout{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            width: 500px;
+            height: 250px;
+            display: none;
+            background-color: white;
+            text-align: center;
+          }
+          .logout-popup{
+            display: block;
+            cursor:default;
+          }
+          .logout h1{
+            color: black;
+          }
+          /* footer */
+          footer{
+            display: flex;
+            flex-direction: row;
+            padding: 20px;
+          }
+          .social-media-icons{
+             width: 50%;
+          }
+          .submit form{
+            width: 50%;
+          }
+          footer #icons i{
+
+            margin-right: 20px;
+            padding: 8px;
+            border-radius: 50%;
+            background-color: white;
+            color: black;
+            font-size: 20px;
+            transition-duration: 0.5s;
+            transition-timing-function: linear;
+            transition-delay: 0s;   
+          }
+          footer #icons i:hover{
+            box-shadow: 1px 0px 12px 4px white;
+            -webkit-box-shadow: 1px 0px 12px 4px white;
+            -moz-box-shadow: 1px 0px 12px 4px white;
+
+          }
+
+          .form-submit{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 300px;
+            width: 500px;
+          }
+          .form-input{
+            height: 30px;
+            outline: none;
+
+          }
+          form button{
+            width: 200px;
+            margin: 0px auto;
+            background-color:#00ffa2;
+            height: 30px;
+            border: none;
+            border-radius: 20px;
+            transition-duration: 0s; 
+          }
+          form button:hover{
+            box-shadow: 1px 0px 12px 4px #00ffa2;
+            -webkit-box-shadow: 1px 0px 12px 4px #00ffa2;
+            -moz-box-shadow: 1px 0px 12px 4px #00ffa2;
+          }
+         .c{
+          background-color: rgb(22, 20, 20);
+            display: flex;
+            justify-content: center;
+          }
+          .innerHTML{
+            color: #00ffa2;
+          }
+          /* responsiveness */
+          @media (max-width:768px){
+            /* nav bar toggle */
+          .toggle{
+            display: block;
+            color: #00ffa2;
+          }
+          nav{
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          .nav{
+            height: 310px;
+            width: 100%;
+            transition-duration: 0.2s;
+          transition-timing-function: linear;
+          transition-delay: 0s;
+          }
+          ul{
+             display: none;
+             flex-direction: column;
+             width: 100%;
+          }
+          li{
+            margin-bottom: 15px;
+          }
+          /* logout */
+          .logout{
+            width: 300px;
+          }
+          /* home */
+          section{
+            background-image: url(./images/h3pGxo.gif);
+          }
+          section div{
+            background-image: url(./images/black-removebg-preview.png); 
+            background-size: cover;
+             background-repeat:no-repeat;
+             background-position: center;
+          }
+          section div h1{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding-left: 10px;
+            font-size: 40px;
+            color: white;
+          }
+          section div button{
+                margin-left: 10px;
+          }
+          section img{
+            display: none;
+          }
+          .form-submit{
+            height: 300px;
+            width: 300px;
+          }
+          /* about */
+          .img-about{
+            display: none;
+          }
+          .about-me{
+            width: 100%;
+          }
+          /* footer */
+          footer{
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+          }
+          .social-media-icons{
+             width: 100%;
+          }
+          .submit form{
+            width: 100%;
+          }
+          .form-submit{
+            padding-top: 50px;
+            margin:auto;
+          }
+          .skills{
+            width: 100%;
+            height: 700px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+           }
+           #Technical-skills{
+            font-size: 15px;
+          }
+          #projects{
+             width: 100%;
+            height: 950px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+          }
+        }
+</style>
+<body>
+
+  <!-- navbar -->
+    <nav>
+       <img src="./images/logo.png" alt="" width="180px">
+        <i class="fas fa-bars toggle"></i>
+    <ul>
+        <li><a href="" >Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#footer">Contact</a></li> 
+        <li><a href="#" class="aa">LogOut</a></li>
+    </ul>
+</nav>
+
+
+  <!-- Home -->
+  <!-- <h1>Hi everyone - I am looking for a new role as a frontend developer and would appreciate your support.Thank you in advance for any connections,advice, or opportunities you can offer.</h1> -->
+<section>
+  <div>
+    <h1>Hi,</h1>
+    <h1>I'm <font style="color:#00ffa2;" class="autotype"></font></h1>
+    <h1 class="auto-type"></h1>
+    <button id="download"><font style="font-weight: 900;">RESUME</font> <i class="fa-solid fa-file-arrow-down fa-fade"></i></button>
+    <img src="./images/black-removebg-preview.png" alt="" id="Hemanth" >
+  </div>
+</section>
+<!-- about me -->
+
+   <div id="About">
+    <div class="img-about">
+      <img src="./images/tri.jpg" alt="" width="100%" height="100%">
+      <img src="./images/black-removebg-preview.png" alt="" id="img-about">
+    </div>
+    <div class="about-me">
+        <h2 style="color: #00ffa2;">About me</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente reiciendis suscipit nobis. Aliquid doloribus numquam sint quisquam error architecto a odit aspernatur vero repellendus, ratione rerum neque cupiditate nemo itaque assumenda, ea quis consectetur id dolorum voluptatum facere repellat enim. Aliquid, nostrum soluta. Itaque saepe, eveniet inventore aliquid sequi eligendi.</p>
+        <button>More <i class="fa-solid fa-angles-right fa-fade"></i></button>
+    </div>
+   </div>
+
+
+  <!-- Skills -->
+
+  <h1 style="color: #00ffa2; text-align: center;" id="skills">Skills</h1>
+ <div class="skills">
+  <!-- HTML -->
+  <div class="progress-bar">
+    <div class="outer">
+      <svg width="160px" height="160px" class="h">
+        <circle  cx="80" cy="80" r="70" stroke-linecap="round"/>
+       </svg>
+    </div>
+    <h3 id="span" style="color: #00ffa2;"></h3>
+    <div class="inner"></div>
+</div>
+
+
+ <!-- *CSS* -->
+ <div class="progress-bar1">
+  <div class="outer">
+    <svg class="svg" width="160px" height="160px">
+      <circle id="circle" cx="80" cy="80" r="70" stroke-linecap="round"/>
+      </svg>
+  </div>
+  <h3 id="span-css" style="color: #00ffa2;"></h3>
+  <div class="inner"></div>
+</div>
+
+<!-- JS -->
+<div class="progress-bar1">
+  <div class="outer">
+    <svg class="svg1" width="160px" height="160px">
+      <circle id="circle1" cx="80" cy="80" r="70" stroke-linecap="round"/>
+      </svg>
+  </div>
+  <h3 id="span-JS" style="color: #00ffa2;"></h3>
+  <div class="inner"></div>
+</div>
+
+<!-- ReactJS -->
+<div class="progress-bar1">
+  <div class="outer">
+    <svg class="svg2" width="160px" height="160px">
+      <circle id="circle2" cx="80" cy="80" r="70" stroke-linecap="round"/>
+      </svg>
+  </div>
+  <h3 id="span-reactJS" style="color: #00ffa2;"></h3>
+  <div class="inner"></div>
+</div>
+</div>
+<!-- Technical Skills -->
+<h1 style="color: #00ffa2; text-align: center;" id="skills">Technical Skills</h1>
+<div id="Technical-skills">
+    <div class="progressbar">
+     <div class="progressline"><b>Communication</b></div><span id="percentage"></span>
+    </div>
+    <div class="progressbar">
+     <div class="progressline progressline1"><b>Creativity</b></div><span id="percentage" class="percentage"></span>
+    </div> 
+    <div class="progressbar">
+     <div class="progressline progressline2"><b>HardWork</b></div><span id="percentage" class="percentag"></span>
+    </div> 
+    <div class="progressbar">
+     <div class="progressline progressline3"><b>ProjectManagement</b></div><span id="percentage" class="percenta"></span>
+    </div>       
+</div>
+
+   <!-- Projects -->
+   <h1 style="color: #00ffa2; text-align: center;">My Projects</h1>
+   <div id="projects">
+            <div class="project-event">
+              <a href="https://hemanthdorepalli.github.io/webpage/" target="_blank"><img src="./images/movie website.jpeg" alt="" width="100%" height="100%">
+                <div class="content">
+                  <h1>Movie-Website</h1>
+                  <p>Using HTML</p>
+                </div>
+              </a>
+            </div>
+            <div class="project-event">
+              <a href="https://hemanthdorepalli.github.io/ash/" target="_blank"><img src="./images/4.jpg" alt="" width="100%" height="100%">
+                <div class="content">
+                  <h1>Events-Website</h1>
+                  <p>Using CSS and BOOTSTRAP</p>
+                </div>
+              </a>
+            </div>
+            <div class="project-event">
+              <a href=""><img src="./images/add cart.jpeg" alt="" width="100%" height="100%">
+                <div class="content">
+                  <h1>Add Cart</h1>
+                  <p>Using JavaScript</p>
+                </div>
+              </a>
+            </div>
+            </div>
+   </div>
+   <div id="SampleProjects">
+    <button>Sample Projects <i class="fa-solid fa-angles-right fa-fade"></i></button>
+  </div>
+   
+  <!-- contact me -->
+  <hr>
+  <footer id="footer">
+       <!-- social media icons -->
+     <div class="social-media-icons">
+      <h1 style="color: white; text-align: center;">Contact <font style="color:#00ffa2;">Me</font></h1>
+      <h4 style="color: #00ffa2;">Let's Work Together</h4>
+      <p style="color: white;font-style: italic;">Web design is not just about creating pretty layouts.
+        It's about understanding the marketing challenge behind your business.</p>
+        
+        <p style="color: white;"><i class="fa-regular fa-paper-plane" style="color: #00ffa2; padding-right: 10px;"></i>hemanthd0916@gmail.com</p>
+        <p style="color: white;"><i class="fa-solid fa-phone-volume" style="color: #00ffa2;padding-right: 10px;"></i>+91-6304308402</p><br>
+      <div id="icons">
+        <a href="https://www.instagram.com/hemanth?igsh=OGQ5ZDc2ODk2ZA==" target="_blank"><i class="fa-brands fa-instagram"  ></i></a>
+      <a href="https://www.linkedin.com/in/hemanth-dorepalli-3b7a26295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://x.com/HemanthDorepal1?t=0a3usxD03l7pZNkB1q-ruA&s=08" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://github.com/hemanthdorepalli" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+     </div>
+          
+
+      <!-- submit form -->
+    <div class="submit-form">
+
+      <form action="https://api.web3forms.com/submit" method="POST" class="form-submit">
+
+        <input type="hidden" name="access_key" value="61382541-5609-4c15-956b-4a4b37b7257e">
+
+
+        <input type="text" name="text" placeholder="Enter Your Name" required class="form-input">
+        <input type="email" name="email" placeholder="Enter Your Email" required class="form-input">
+        <textarea name="message" id="" cols="30" rows="10" placeholder="Enter Your Message" required></textarea>
+        <button type="submit">Send message</button>
+
+      </form>
+    </div>
+    </footer>
+    <div class="c">
+           <p style="color: white;">Copyright <i class="fa-regular fa-copyright"></i>2024;Designed by <a href="#Hemanth" style="text-decoration: none; color:#00ffa2 ;">@Hemanth</a></p>
+    </div>
+<!-- logout -->
+
+<div class="logout">
+  <i class="fa-regular fa-circle-question fa-beat" style="color: black; font-size: 80px; padding-top: 10px;"></i>
+  <h1>Are you Sure you want to LogOut?</h1>
+ <a href="./index.html"> <button style="background-color: green; color: white; border: none; width: 50px; height:30px; margin-right: 20px;">Yes</button></a>
+ <a href=""> <button style="background-color: red; color: white; border: none; width: 50px; height:30px;">No</button></a>
+</div>
+<!-- auto type link -->
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      // toggle click
+        let nav = document.querySelector('nav')
+        let ul=document.querySelector('ul')
+
+        let button=document.querySelector('.toggle')
+        button.addEventListener('click',()=>{
+            ul.classList.toggle("active")
+            nav.classList.toggle("nav")
+        })
+
+        // auto type
+        let typed= new Typed(".autotype",{
+          strings :["Hemanth"],
+          typeSpeed : 100
+        })
+        
+        let type = new Typed(".auto-type",{
+          strings :["Front-end developer",],
+          typeSpeed : 100
+        })
+
+        //  logout click
+        let div = document.querySelector('.logout')
+        let id = document.querySelector('.aa')
+        id.addEventListener('click',()=>{
+          div.classList.toggle('logout-popup')
+        })
+
+        // download resume
+        let btn = document.getElementById('download')
+         btn.addEventListener('click',()=>{
+          location.href='./D.HEMANTH[1].docx'
+         })
+
+        
+         let span = document.querySelector('#span')
+    let counter=0
+    setInterval(()=>{
+        if(counter == 90){
+            clearInterval();
+        }else{
+            counter +=1
+            span.innerHTML = 'HTML5'+'<br>'+ counter + '%'
+        }
+    },20)
+
+    //css
+    let css = document.querySelector('#span-css')
+    let countr=0
+    setInterval(()=>{
+        if(countr == 80){
+            clearInterval();
+        }else{
+            countr +=1
+            css.innerHTML = 'CSS 3'+'<br>'+ countr + '%'
+        }
+    },20)
+
+    //JS
+    let js = document.querySelector('#span-JS')
+    let count=0
+    setInterval(()=>{
+        if(count == 55){
+            clearInterval();
+        }else{
+            count +=1
+            js.innerHTML = 'JavaScript' + '<br>' + count + '%'
+        }
+    },30)
+
+    // reactJS
+    let reactjs = document.querySelector('#span-reactJS')
+    let coun=0
+    setInterval(()=>{
+        if(coun == 55){
+            clearInterval();
+        }else{
+            coun +=1
+            reactjs.innerHTML = 'reactJS'+'<br>'+ coun + '%'
+        }
+    },40)
+
+    // 
+    let percentage= document.querySelector('#percentage')
+    let cou=0
+    setInterval(()=>{
+        if(cou == 90){
+            clearInterval();
+        }else{
+            cou +=1
+            percentage.innerHTML = cou + '%'
+        }
+    },30)
+
+    let percentag= document.querySelector('.percentage')
+    let co=0
+    setInterval(()=>{
+        if(co == 85){
+            clearInterval();
+        }else{
+            co +=1
+            percentag.innerHTML = co + '%'
+        }
+    },25)
+    // 
+    let percenta= document.querySelector('.percentag')
+    let c=0
+    setInterval(()=>{
+        if(c == 95){
+            clearInterval();
+        }else{
+            c +=1
+            percenta.innerHTML = c + '%'
+        }
+    },30)
+    // 
+    let percent= document.querySelector('.percenta')
+    let i=0
+    setInterval(()=>{
+        if(i == 85){
+            clearInterval();
+        }else{
+            i +=1
+            percent.innerHTML = i + '%'
+        }
+    },30)
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Login</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+             width: 100vw;
+             height: 100vh;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             background-image: url(./images/dark-theme-wf4.jpg);
+             background-size: cover;
+             background-repeat:no-repeat;
+             background-position: bottom;
+        }
+        div{
+            background: transparent;
+            width: 100%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+             justify-content: space-evenly;
+             align-items: center;
+        }
+        .email-password{
+            width: 100%;
+            height: 120px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .email-password input{
+            padding-left: 10px;
+            text-align: center;
+        }
+        small{
+            color: red;
+            display:none;
+        }
+        .small{
+            display: block;
+        }
+        em{
+            color: red;
+            display:none;
+        }
+        .em{
+            display: block;
+        }
+        .captcha-box{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+             justify-content: center;
+             align-items: center;
+        }
+        input{
+            width: 50%;
+            height: 2rem;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid;   
+            background: transparent;
+            color: white;
+            transition-duration: 0.5s;
+          transition-timing-function: linear;
+          transition-delay: 0s;
+        }
+        input:hover{
+            background-color: black;
+            box-shadow: 0px 12px 14px 0px rgba(255,255,255,1);
+            -webkit-box-shadow: 0px 12px 14px 0px rgba(255,255,255,1);
+            -moz-box-shadow: 0px 12px 14px 0px rgba(255,255,255,1);
+        }
+        button{
+            border: 1px rgb(255, 255, 255) solid;
+        }
+        span{
+            border: 1px dashed white;
+            background-image: repeating-linear-gradient(rgb(34, 2, 62), rgb(16, 16, 0) 10%, rgb(0, 43, 128) 20%);
+            height: 27px;
+            min-width: 40%;
+            text-align: center;
+            font-family:monospace;
+            letter-spacing: 10px;
+            border-bottom-left-radius:200px;
+            border-top-left-radius:200px;
+            cursor: not-allowed;
+            color: grey;
+            padding-top: 5px;
+        }
+        #text{
+            text-align: center;
+            
+        }
+        #login-btn{
+            width: 50%;
+            height: 2rem;
+            border-radius: 200px;
+            background: transparent;
+            color: white;
+            transition-duration: 0.5s;
+            transition-timing-function: linear;
+            transition-delay: 0s;
+        }
+        #login-btn:hover{
+            background-color: white;
+            color: black;
+            box-shadow: 1px 0px 12px 4px rgba(255,255,255,1);
+            -webkit-box-shadow: 1px 0px 12px 4px rgba(255,255,255,1);
+            -moz-box-shadow: 1px 0px 12px 4px rgba(255,255,255,1);
+        }
+        #Refresh-btn{
+            width: 10%;
+            height: 27px;
+            border-bottom-right-radius:200px;
+            border-top-right-radius:200px;
+            background: transparent;
+        }
+        a{
+            color: white; 
+            text-decoration: none;
+            cursor: pointer;
+        }
+        a:hover{
+            color: greenyellow;
+        }
+        .error{
+            background-color: red;
+        }
+        .inncorrect-pass-email{
+            border-bottom: red 2px solid;
+        }
+
+        /* ************** */
+
+        
+
+        @media screen and (min-width:100px) and (max-width:768px) {
+          div{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: space-evenly;
+          }
+        }
+    </style>
+  </head>
+  <body>
+   <div >
+
+    <h1 style="color: white;">LOGIN</h1>
+
+    <!-- email and password boxes -->
+
+     <section class="email-password">
+        <input type="text" placeholder="Enter email ID" id="email-box">
+        <small>!Inncorrect Email Id</small>
+        <input type="password" placeholder="password" id="password-box">
+        <em>!Inncorrect password</em>
+     </section>
+
+    <!-- captcha box -->
+
+    <section class="captcha-box">
+        <span id="disabled-box"> </span>
+       <button onclick="captchaGenarator()" id="Refresh-btn">
+        <i class="fa-solid fa-arrows-rotate" style="color: white;"></i>
+       </button>
+    </section>
+    <input type="text" placeholder="Enter Captcha text" id="text" id="text">
+
+
+    <!-- login button -->
+    <button id="login-btn">login</button>
+
+    <!-- Get password -->
+    <section class="get-password">
+        <a href="./getpass.html">you don't know password?</a>
+    </section>
+</div>
+
+<script>
+
+    // Random captcha function
+
+    let input=document.querySelector('#disabled-box')
+        function captchaGenarator(){
+        let captcha=''
+        values='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyx1234567890'
+        for(i=0;i<=6;i++){
+            random=values[Math.floor(Math.random(i)*62)]
+            captcha +=random
+        }
+        return input.textContent=captcha
+        }captchaGenarator()
+
+        // get elements 
+    let emailbox = document.getElementById('email-box')
+    let passwordbox = document.getElementById('password-box')
+    let text = document.getElementById('text')
+    let button = document.querySelector('button')
+    let loginbtn = document.getElementById('login-btn')
+    let small=document.querySelector('small')
+    let em=document.querySelector('em')
+
+//  email and password data
+
+  userdetails=[{Email:'hemanthd0916@gmail.com',password:'Hemanth@123'}]
+       userdetails.map(Element=>{
+
+//  login events
+
+       loginbtn.addEventListener('click',()=>{
+       if(emailbox.value === Element.Email&&passwordbox.value === Element.password&&input.textContent === text.value){
+            location.href='./Portfolio.html'   
+       }else if(!emailbox.value){
+
+        emailbox.classList.add('error')
+
+       }else if(emailbox.value !== Element.Email){
+
+           emailbox.classList.add('inncorrect-pass-email')
+           small.classList.add('small')
+           emailbox.value=''
+
+       }else if(!passwordbox.value){
+
+        passwordbox.classList.add('error')
+
+       }else if(passwordbox.value !== Element.password){
+
+        passwordbox.classList.add('inncorrect-pass-email')
+        em.classList.add('em')
+        passwordbox.value=''
+
+       } else if(!text.value){
+
+           text.classList.add('error')
+
+       } else if(text.value !== input.textContent){
+
+          text.classList.add('error')
+          
+          } if(input.textContent !== text.value){
+
+            text.value=''
+       }
+            })
+        })
+
+</script>
+ </body>
+</html>

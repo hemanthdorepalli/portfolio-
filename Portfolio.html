@@ -331,17 +331,42 @@
            }
 
            /* projects */
-           #projects{
+           .project-section{
              width: 100%;
+            height: 350px;
+          }
+          .ccc{
+            height: 700px;
+            transition-duration: 0.2s;
+          transition-timing-function: linear;
+          }
+          .projects{
+            width: 100%;
             height: 350px;
             display: flex;
             align-items: center;
             justify-content: space-evenly;
           }
+
            .project-event{
             width: 250px;
             height: 300px;
-            
+           }
+           .more-projects-btn{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            display: none;
+           }
+           .cccc{
+            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+          }
+           .more-projects{
+            width: 250px;
+            height: 300px;
            }
            .content{
             width: 250px;
@@ -388,6 +413,9 @@
             box-shadow: 1px 0px 12px 4px #00ffa2;
             -webkit-box-shadow: 1px 0px 12px 4px #00ffa2;
             -moz-box-shadow: 1px 0px 12px 4px #00ffa2;
+          }
+          #morebtn{
+            font-weight: 900;
           }
 
 
@@ -565,7 +593,10 @@
            #Technical-skills{
             font-size: 15px;
           }
-          #projects{
+          .project-section{
+            height: 950px;
+          }
+          .projects{
              width: 100%;
             height: 950px;
             display: flex;
@@ -573,6 +604,26 @@
             justify-content: space-evenly;
             flex-direction: column;
           }
+          .ccc{
+            height: 1900px;
+          }
+          .more-projects-btn{
+            height: 950px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+            display: none;
+          }
+          .cccc{
+            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+
+          }
+
         }
 </style>
 <body>
@@ -599,7 +650,7 @@
     <h1>Hi,</h1>
     <h1>I'm <font style="color:#00ffa2;" class="autotype"></font></h1>
     <h1 class="auto-type"></h1>
-    <button id="download"><font style="font-weight: 900;">RESUME</font> <i class="fa-solid fa-file-arrow-down fa-fade"></i></button>
+    <a href="#footer"><button><font style="font-weight: 900;">Contact Me </font> <i class="fa-solid fa-angles-down fa-fade"></i></button></a>
     <img src="./images/black-removebg-preview.png" alt="" id="Hemanth" >
   </div>
 </section>
@@ -612,8 +663,8 @@
     </div>
     <div class="about-me">
         <h2 style="color: #00ffa2;">About me</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente reiciendis suscipit nobis. Aliquid doloribus numquam sint quisquam error architecto a odit aspernatur vero repellendus, ratione rerum neque cupiditate nemo itaque assumenda, ea quis consectetur id dolorum voluptatum facere repellat enim. Aliquid, nostrum soluta. Itaque saepe, eveniet inventore aliquid sequi eligendi.</p>
-        <button>More <i class="fa-solid fa-angles-right fa-fade"></i></button>
+        <p>Hello, I'm Hemanth Dorepalli , with a Bachelor of Technology in Mechanical Engineering. Am Fresher,Let's collaborate and turn ideas into reality. I'm excited about the opportunity to contribute my skills and creativity to your next project. Feel free to explore my portfolio and connect with me-I'm always open to new challenges and collaborations.</p>
+        <button id="download"><font style="font-weight: 900;">RESUME</font> <i class="fa-solid fa-file-arrow-down fa-fade"></i></button>
     </div>
    </div>
 
@@ -686,35 +737,62 @@
 
    <!-- Projects -->
    <h1 style="color: #00ffa2; text-align: center;">My Projects</h1>
-   <div id="projects">
-            <div class="project-event">
-              <a href="https://hemanthdorepalli.github.io/webpage/" target="_blank"><img src="./images/movie website.jpeg" alt="" width="100%" height="100%">
-                <div class="content">
-                  <h1>Movie-Website</h1>
-                  <p>Using HTML</p>
-                </div>
-              </a>
-            </div>
-            <div class="project-event">
-              <a href="https://hemanthdorepalli.github.io/ash/" target="_blank"><img src="./images/4.jpg" alt="" width="100%" height="100%">
-                <div class="content">
-                  <h1>Events-Website</h1>
-                  <p>Using CSS and BOOTSTRAP</p>
-                </div>
-              </a>
-            </div>
-            <div class="project-event">
-              <a href=""><img src="./images/add cart.jpeg" alt="" width="100%" height="100%">
-                <div class="content">
-                  <h1>Add Cart</h1>
-                  <p>Using JavaScript</p>
-                </div>
-              </a>
-            </div>
-            </div>
-   </div>
+   <div class="project-section">
+             <div class="projects">
+              <div class="project-event">
+                <a href="https://hemanthdorepalli.github.io/webpage/" target="_blank"><img src="./images/movie website.jpeg" alt="" width="100%" height="100%">
+                  <div class="content">
+                    <h1>Movie-Website</h1>
+                    <p>Using HTML</p>
+                  </div>
+                </a>
+              </div>
+              <div class="project-event">
+                <a href="https://hemanthdorepalli.github.io/ash/" target="_blank"><img src="./images/4.jpg" alt="" width="100%" height="100%">
+                  <div class="content">
+                    <h1>Events-Website</h1>
+                    <p>Using CSS and BOOTSTRAP</p>
+                  </div>
+                </a>
+              </div>
+              <div class="project-event">
+                <a href=""><img src="./images/add cart.jpeg" alt="" width="100%" height="100%">
+                  <div class="content">
+                    <h1>Add Cart</h1>
+                    <p>Using JavaScript</p>
+                  </div>
+                </a>
+              </div>
+             </div>
+             <div class="more-projects-btn">
+              <div class="more-projects">
+                <a href="https://hemanthdorepalli.github.io/todo/" target="_blank"><img src="./images/todo list.jpeg" alt="" width="100%" height="100%">
+                  <div class="content">
+                    <h1>ToDo list-Website</h1>
+                    <p>Using JavaScript</p>
+                  </div>
+                </a>
+              </div>
+              <div class="more-projects">
+                <a href="https://hemanthdorepalli.github.io/calculator/" target="_blank"><img src="./images/cal.jpeg" alt="" width="100%" height="100%">
+                  <div class="content">
+                    <h1>Calculator</h1>
+                    <p>Using JavaScript</p>
+                  </div>
+                </a>
+              </div>
+              <div class="more-projects">
+                <a href="https://hemanthdorepalli.github.io/QR-code/" target="_blank"><img src="./images/QR.png" alt="" width="100%" height="100%">
+                  <div class="content">
+                    <h1>Random QR</h1>
+                    <p>Using JavaScript</p>
+                  </div>
+                </a>
+              </div>
+             </div>
+       </div>
    <div id="SampleProjects">
-    <button>Sample Projects <i class="fa-solid fa-angles-right fa-fade"></i></button>
+    <button id="morebtn"></button>
   </div>
    
   <!-- contact me -->
@@ -799,7 +877,7 @@
         // download resume
         let btn = document.getElementById('download')
          btn.addEventListener('click',()=>{
-          location.href='./D.HEMANTH[1].docx'
+          location.href='./D.HEMANTH[1] (1).docx'
          })
 
         
@@ -850,7 +928,7 @@
         }
     },40)
 
-    // 
+    // percentages
     let percentage= document.querySelector('#percentage')
     let cou=0
     setInterval(()=>{
@@ -883,7 +961,7 @@
             percenta.innerHTML = c + '%'
         }
     },30)
-    // 
+    // percentages
     let percent= document.querySelector('.percenta')
     let i=0
     setInterval(()=>{
@@ -894,6 +972,29 @@
             percent.innerHTML = i + '%'
         }
     },30)
+
+    //more-less button
+    let B = document.getElementById('morebtn')
+    let aa =document.querySelector('.project-section')
+    let cc = document.querySelector('.more-projects-btn')
+     let display =0
+     call()
+     function call(){
+      B.innerHTML='More <i class="fa-solid fa-angles-down fa-fade"></i>'
+      aa.classList.remove('ccc')
+      cc.classList.remove('cccc')
+     }
+    B.addEventListener('click',()=>{
+      if(display == 0){
+        B.innerHTML='Less <i class="fa-solid fa-angles-up fa-fade"></i>'
+        aa.classList.add('ccc')
+        cc.classList.add('cccc')
+        display =1
+      }else{
+        call()
+        display=0
+      }
+    })
 
 
 

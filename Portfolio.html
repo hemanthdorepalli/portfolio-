@@ -61,6 +61,8 @@
             display: block;
           }
 
+          
+
           /* Home */
           section {
   background-image: url(./images/h3pGxo.gif);
@@ -104,16 +106,11 @@ section div button:hover {
 
 section img {
   margin: 20px 20px 0px 0px;
-  height: 400px; 
-  width: 400px; 
+  height: 430px; 
+  width: 600px; 
   position: absolute;
   top: 80px;
-  right: 0px;
-  border-radius: 50%; 
-  background: linear-gradient(rgb(3, 230, 131), #05a369); 
-
-  box-shadow: 0 0 20px rgba(0, 255, 162, 0.8); 
-
+  right: -100px;
 }
 
 
@@ -242,8 +239,8 @@ section img {
 
 
         
-          /* technical skills */
-          #Technical-skills {
+/* Technical Skills */
+#Technical-skills {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -255,13 +252,13 @@ section img {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 150px;
-    height: 150px;
+    width: 200px; /* Increased the width */
+    height: 200px; /* Increased the height */
 }
 
 .circle {
-    width: 120px;
-    height: 120px;
+    width: 180px; /* Increased the width */
+    height: 180px; /* Increased the height */
     border-radius: 50%;
     background: conic-gradient(#00ffa2 var(--percent), #e0e0e0 0%);
     display: flex;
@@ -271,7 +268,7 @@ section img {
     text-align: center;
     color: #fff;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 22px; /* Adjust font size to match the larger circle */
     transition: background 0.5s ease;
     --percent: 0%; 
 }
@@ -281,16 +278,17 @@ section img {
     position: absolute;
     top: 0;
     left: 0;
-               right: 0;
-               bottom: 0;
-               border-radius: 50%;
-               background: rgba(0, 0, 0, 0.1);
-           }
-           
-           .skill-name {
-               position: relative;
-               z-index: 1;
-           }
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.skill-name {
+    position: relative;
+    z-index: 1;
+}
+
            
            
            
@@ -300,8 +298,6 @@ section img {
              flex-direction: column;
              align-items: center;
              padding: 20px;
-             border: #00e594 solid 1px;
-           
              height: auto;
            }
            
@@ -428,7 +424,16 @@ section img {
 
           /* responsiveness */
           @media (max-width:768px){
-            /* nav bar toggle */
+            /* nav bar toggle *
+/* Responsive styling for smaller screens */
+@media (max-width: 600px) {
+    .autotype, .auto-type {
+        font-size: 1.5em; 
+        line-height: 1.0;  
+        padding: 0 10px; 
+    }
+}
+
           .toggle{
             display: block;
             color: #00ffa2;
@@ -533,7 +538,7 @@ section img {
 <div id="About">
   <div class="about-me">
     <h2>About Me</h2>
-    <p>I am Hemanth Dorepalli, a passionate software developer with a Bachelor of Technology, eager to pursue a full-stack web developer role where I can bring my skills and creativity to the forefront. I have experience with both front-end and back-end technologies, including Java, JavaScript, ReactJS, and Spring Boot. My notable projects include a responsive Chatting Web Application developed using React Js, HTML, and CSS, with Firebase integration for real-time messaging, user authentication, and profile management. I also created a Weather Dashboard with React Js, HTML, Tailwind CSS, and JavaScript, integrating the OpenWeatherMap API for real-time weather data. Additionally, I developed the My Diary Web Application using Spring Boot and Thymeleaf, which features secure user authentication and diary management, and is deployed on AWS for reliable access. These projects reflect my ability to build effective, user-centric solutions and my enthusiasm for contributing to innovative and collaborative environments.</p>
+    <p>I am a passionate software developer with a strong foundation in full-stack web development. With a background in Java, JavaScript, and modern web technologies like ReactJS and Spring Framework, I thrive in environments that value creativity and innovation. I completed my Bachelor's in Technology with a CGPA of 7.0 and have hands-on experience through a 6-month full-stack internship at Social Prachar Institute, Hyderabad. I am eager to contribute to dynamic projects and continue growing my skill set in a forward-thinking organization.</p>
     <a href="./IMG/Hemanth resume.pdf" target="_blank" id="download">
       <button><font style="font-weight: 900;">RESUME</font></button>
     </a>
@@ -591,8 +596,8 @@ section img {
     <small>Spring tool suite</small>
   </div>
   <div class="skill-box">
-    <img src="./IMG/GitHub-Logo.png" alt="Skill 1 Image">
-    <small>GitHub</small>
+    <img src="./IMG/nodejs.jpeg" alt="Skill 1 Image">
+    <small>node.js</small>
   </div>
 </div>
 
@@ -658,6 +663,37 @@ section img {
       </a>
     </div>
   </div>
+
+  <div class="projects-row">
+    <div class="project-event">
+      <a href="https://hemanthdorepalli.github.io/Hidlinfo-frontend/" target="_blank">
+        <img src="./IMG/Hodlinfo.png" alt="" width="100%" height="100%">
+        <div class="content">
+          <h1>Hodlinfo-clone</h1>
+          <p>Using Postgresql and Node.js</p>
+        </div>
+      </a>
+    </div>
+    <div class="project-event">
+      <a href="https://hemanthdorepalli.github.io/Client-side/" target="_blank">
+        <img src="./IMG/login.png" alt="" width="100%" height="100%">
+        <div class="content">
+          <h4>Dynamic User Availability & Scheduling System</h4>
+          <p>Using TypeScript, Node.js & MongoDB</p>
+        </div>
+      </a>
+    </div>
+    <div class="project-event">
+      <a href="https://hemanthdorepalli.github.io/Lunacal-assignment/" target="_blank">
+        <img src="./IMG/Lunacal-assignment.png" alt="" width="100%" height="100%">
+        <div class="content">
+          <h1>Lunacal-assignment</h1>
+          <p>Using Reactjs & Tailwind CSS</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
   <div class="projects-row">
     <div class="project-event">
       <a href="https://hemanthdorepalli.github.io/todo/" target="_blank">
